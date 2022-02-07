@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lora:ital,wght@1,400;1,500;1,600;1,700&family=Poppins:wght@100;300;400;500;600;700;800;900&family=Praise&family=Supermercado+One&family=Varela&family=Varela+Round&family=Yuji+Mai&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lora:ital,wght@1,400;1,500;1,600;1,700&family=Poppins:wght@100;300;400;500;600;700;800;900&family=Praise&family=Supermercado+One&family=Varela&family=Varela+Round&family=Yuji+Mai&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: rgb(148, 36, 148);
+  color: white;
+  height: 65px;
+  font-size: 27px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+  font-family: 'Josefin', sans-serif;
+}
+
+.box {
+  border: 2px dashed black;
+  font-size: 8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.box:hover {
+  background-color: rgb(245, 208, 245);
+}
+
+.info {
+  font-size: 22px;
+}
+.gameInfo {
+  padding: 0 35px;
+  font-family: 'Baloo Bhaina 2', cursive;
+}
+
+.imgbox img {
+  width: 0;
+  transition: width 1s ease-in;
+}
+
+.br-0 {
+  border-right: 0;
+}
+
+.bl-0 {
+  border-left: 0;
+}
+
+.bb-0 {
+  border-bottom: 0;
+}
+
+.bt-0 {
+  border-top: 0;
+}
+
+#reset {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Baloo Bhaina 2', cursive;
+  margin: 0 23px;
+  padding: 0px 10px;
+  background-color: rgb(253, 197, 253);
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* .line {
+  background-color: black;
+  height: 3px;
+  width: 22 vw;
+  position: absolute;
+  transform: translate(10vw, 15vw) rotate(90deg);
+} */
+/* Responsivity */
+
+@media screen and (max-width: 950px) {
+  .gameContainer {
+    flex-wrap: wrap;
+  }
+
+  .gameInfo {
+    margin-top: 35px;
+  }
+  .gameInfo h1 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 20vw);
+  }
+
+  .gameinfo h1 {
+    font-size: 1.5rem;
+  }
+}
